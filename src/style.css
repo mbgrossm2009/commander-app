@@ -1,0 +1,200 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
+
+/* App */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.header p {
+  color: #a3a3a3;
+  margin-top: 0.5rem;
+}
+
+/* Search form */
+.search-form {
+  position: relative;
+}
+
+.search-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input input {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  background: #171717;
+  color: #f5f5f5;
+  padding: 0.75rem 1rem;
+  outline: none;
+}
+
+.search-input input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px #6366f1;
+}
+
+.search-input button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #6366f1;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.search-input button:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.search-input button:disabled {
+  background: #404040;
+  cursor: not-allowed;
+}
+
+/* Autocomplete */
+.suggestions {
+  position: absolute;
+  z-index: 10;
+  margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  background: #171717f2;
+  backdrop-filter: blur(8px);
+}
+
+.suggestions button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.suggestions button:hover {
+  background: #262626;
+}
+
+/* Error */
+.error {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #7f1d1d;
+  border-radius: 12px;
+  background: #450a0a;
+  color: #fca5a5;
+  font-size: 0.9rem;
+}
+
+/* Results */
+.results {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-block {
+  border: 1px solid #262626;
+  border-radius: 16px;
+  background: #171717;
+  padding: 1rem;
+}
+
+.card-block h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card-block img {
+  margin-top: 0.75rem;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Combo details */
+.combo-details {
+  border: 1px solid #262626;
+  border-radius: 16px;
+  background: #171717;
+  padding: 1rem;
+}
+
+.combo-details a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: #f5f5f5;
+  color: #0a0a0a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.combo-details a:hover {
+  background: #fff;
+}
+
+.combo-details ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  color: #d4d4d4;
+}
+
+.combo-details li {
+  margin-bottom: 0.25rem;
+}
+
+/* Footer */
+.footer-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #737373;
+}
